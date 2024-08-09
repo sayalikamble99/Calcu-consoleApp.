@@ -8,6 +8,7 @@ Build any .NET Core sample using the .NET Core CLI, which is installed with the 
 To build and run your sample:
 
 Go to the sample folder and build to check for errors:
+dotnet build
 
 dotnet build
 another way to build project
