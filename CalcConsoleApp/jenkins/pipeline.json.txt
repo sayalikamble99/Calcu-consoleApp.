@@ -1,0 +1,34 @@
+﻿node {
+    
+    stage('Code') { 
+        // Get some code from a GitHub repository
+        git branch: 'main', url: 'https://github.com/harshalschaudhari/CalcConsoleApp.git'
+    }
+    stage('RestorePackages') {
+        // Restore NuGet packages
+        bat 'dotnet restore '
+   
+    }
+    stage('Build') {
+        // Run the dotnet build
+        bat 'dotnet build'
+    }
+    stage('Tests') {
+        // Run the dotnet build
+        bat 'dotnet test --collect:"XPlat Code Coverage"'
+    }
+    stage('Run') {
+        //This stage added only for Project 'Run' demonstration purpose
+        bat 'dotnet run --project .\\CalcConsoleApp\\CalcConsoleApp.csproj'
+    }
+    stage('ArchiveArtifacts') {
+        //Todo: How to archive builds
+    }
+    stage('PublishTestReport') {
+        //Publish test results
+        cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'CalcConsoleApp.Tests\\TestResults\\*\\coverage.cobertura.xml', conditionalCoverageTargets: '70, 0, 0', failUnhealthy: false, failUnstable: false, lineCoverageTargets: '80, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '80, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
+    }
+    stage('Email') {
+         mail body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL} \n Logs: ", subject: 'Calc Console Project ', to: 'test@example.com'
+    }
+}

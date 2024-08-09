@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "KETMEaqzoOM=",
+  "success": true,
+  "projectFilePath": "F:\\GIT\\Calcu ConsoleApp\\CalcConsoleApp\\CalcConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Asit Kamble\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.32\\microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
+    "C:\\Users\\Asit Kamble\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.32\\microsoft.windowsdesktop.app.ref.6.0.32.nupkg.sha512",
+    "C:\\Users\\Asit Kamble\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.32\\microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512",
+    "C:\\Users\\Asit Kamble\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.32\\microsoft.netcore.app.host.win-x64.6.0.32.nupkg.sha512"
+  ],
+  "logs": []
+}
