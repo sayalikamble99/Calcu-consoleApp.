@@ -5,7 +5,7 @@ The code in this repository represents programs that demonstrate Math operations
 Building a sample for Use code coverage for unit testing
 Build any .NET Core sample using the .NET Core CLI, which is installed with the .NET Core SDK. Then run these commands from the CLI in the directory of any sample:
 
-To build and run your sample:
+To build and run your sample 
 
 Go to the sample folder and build to check for errors:
 dotnet build
